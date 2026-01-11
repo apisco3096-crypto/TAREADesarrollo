@@ -1,6 +1,6 @@
 import express from "express";
 import cors from "cors";
-import { pool } from "./db.js"; // Asegúrate de que tu archivo db.js existe y exporta 'pool'
+import { pool } from "./db.js";
 
 const app = express();
 app.use(cors());
@@ -82,7 +82,7 @@ app.put("/usuarios/:id", async (req, res) => {
     }
     
     if (updates.length === 0) {
-      return res.status(400).json({ msg: "Se requiere al menos un campo para actualizar (cedula, nombre o clave)" });
+      return res.status(400).json({ msg: });
     }
 
     values.push(id); 
